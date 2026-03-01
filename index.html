@@ -3,14 +3,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Visa Entitlement Verification Online: Visa holder enquiry</title>
     
-    <!-- Font Awesome 4.7 (exactly as VEVO uses) -->
+    <!-- Font Awesome 4.7 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <style>
-        /* EXACT VEVO CSS - PERFECT REPLICA */
+        /* EXACT VEVO CSS - AUTHENTIC REPLICA */
         * {
             margin: 0;
             padding: 0;
@@ -19,37 +19,37 @@
 
         html, body {
             width: 100%;
-            min-width: 1024px; /* Force desktop mode */
-            background: #f0f3f5;
+            background: #f2f5f7;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
             color: #333;
-            font-size: 12px;
+            font-size: 14px;
             line-height: 1.5;
             margin: 0;
             padding: 0;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
         }
 
         a {
             text-decoration: none;
-            color: #132e48;
+            color: #1a3a6e;
         }
 
         a:hover {
             text-decoration: underline;
         }
 
-        /* Header - exactly like VEVO */
-        .header {
+        /* Header - exact VEVO style */
+        .header-top {
             background: #132e48;
-            color: white;
-            padding: 12px 30px;
-            border-bottom: 4px solid #132e48;
+            padding: 8px 30px;
+            border-bottom: 2px solid #1e4d7a;
         }
 
-        .header-content {
+        .header-top-content {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
@@ -57,145 +57,157 @@
             align-items: center;
         }
 
-        .header-logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .header-logo .home-icon {
-            width: 20px;
-            height: 20px;
-            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAbwAAAG8B8aLcQwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADpSURBVDiNpZM9SgNREIC/+VnAiGgrpBAsBAsLK0FQFCy08QK2HsEz6AkSrS3iHbyBrY2NhZ2FYCFYCFpYCCKI+Be85G14zS4zm8C3mZ3Z+dlhYIgRUJKkA9wD28AysJ+kRUtL+xZ7wDawDzxJ6pM0TdI8SRdpuL9VYAP4BE6BR8BKUs9NmmZtZ6PmNfAuaWIDPzFJmta2h+WqB1z4Uf1bWcO7tJqkLxvgKeT3C5zjzzY8SNL3SXqVdF0HpAQr4FjSeym2U0svknZLAWm4/yXgQ9L3uN8CnpP0GgevgHtJD7WAFDgAzpK0UQoI8Aa8SSpKf1mSBsBN+CYfJfVrQfzR/3/yC6RR0QHRAAAAAElFTkSuQmCC') no-repeat center;
+        .home-icon {
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAbwAAAG8B8aLcQwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADrSURBVDiNlZQ9TsNAEIU/OwoFJBQ0lFwBxAlSuOAAnIACcQK6NByAA9BScQSQaCg5ARQUSZREiCJJkRw7xco6a6+9nm+ebmY9TwEwMbP7kqQ1MAtMA+vE7FOSJiXpBZgDN8A28Cpm70oBU2AReAC2gFfgQ8x6pf0m5h6wC9wBj8CbmD2L2Udivi3t3j1dAAfAIzAGboGfxOxZzB7F7Lxsc60M3gRjB8A98A38JmaP4Bq4Bp6B9zLQUfmNqZwHq8BdYI+AFTCDQ/HVtDzzb/kP8z/+BVbCbC4zPwBfFqC/xBFJ06rAD3AqZi+/1X+JmH3W2vu2rT8Bnl9hJYptR48AAAAASUVORK5CYII=') no-repeat center;
             background-size: contain;
-            margin-right: 20px;
             cursor: pointer;
         }
 
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header-logo img {
+            height: 45px;
+            width: auto;
+        }
+
         .header-logo h1 {
+            color: white;
             font-size: 22px;
             font-weight: 300;
-            color: white;
+            letter-spacing: 0.5px;
         }
 
         .header-logo h1 span {
             font-weight: 700;
         }
 
-        .header-help {
-            color: white;
+        .help-btn {
             background: none;
             border: none;
-            font-size: 13px;
+            color: white;
+            font-size: 14px;
             cursor: pointer;
             padding: 5px 10px;
         }
 
-        .header-help:hover {
+        .help-btn:hover {
             text-decoration: underline;
         }
 
         /* Banner */
         .banner {
-            background: #132e48;
-            padding: 8px 30px 15px 30px;
+            background: #1e4d7a;
+            padding: 12px 30px;
+            border-bottom: 1px solid #2a5f8a;
+        }
+
+        .banner-content {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .banner h2 {
             color: white;
             font-size: 28px;
             font-weight: 300;
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
-        /* Main container - force desktop width */
+        /* Main container - responsive */
         .main-container {
             max-width: 1200px;
             margin: 25px auto;
-            padding: 0 30px;
+            padding: 0 20px;
         }
 
-        /* Info text */
-        .info-text {
+        /* Info panel */
+        .info-panel {
             background: white;
-            padding: 18px 25px;
             border-radius: 8px 8px 0 0;
-            margin-bottom: 2px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            font-size: 13px;
+            padding: 18px 25px;
+            border-bottom: 2px solid #d9e1e7;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
-        .info-text p {
-            margin-bottom: 8px;
+        .info-panel p {
             color: #333;
+            margin-bottom: 6px;
+            font-size: 14px;
         }
 
-        .info-text .required-star {
-            color: #e00;
+        .info-panel .required-star {
+            color: #cc0000;
             font-weight: bold;
         }
 
-        /* Form container */
-        .form-container {
+        /* Form panel */
+        .form-panel {
             background: white;
             border-radius: 0 0 8px 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             padding: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        .form-section-title {
+        .form-title {
             color: #132e48;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 600;
             margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #d9e1e7;
         }
 
-        /* Field row - perfect VEVO spacing */
+        /* Field rows - perfect VEVO proportions */
         .field-row {
             display: flex;
             margin-bottom: 18px;
             align-items: flex-start;
+            flex-wrap: wrap;
         }
 
         .field-label {
-            width: 210px;
+            width: 200px;
             padding-top: 8px;
-            font-size: 13px;
-            font-weight: 500;
+            font-size: 14px;
             color: #333;
-            text-align: left;
+            font-weight: normal;
         }
 
         .field-label .required {
-            color: #e00;
+            color: #cc0000;
             margin-left: 3px;
-            font-size: 14px;
+            font-size: 15px;
         }
 
         .field-control {
             flex: 1;
+            min-width: 300px;
             max-width: 500px;
         }
 
         .field-help {
-            margin-left: 15px;
+            width: 40px;
+            text-align: center;
             padding-top: 8px;
-            width: 30px;
         }
 
         .field-help i {
-            color: #132e48;
+            color: #1a3a6e;
             font-size: 18px;
             cursor: help;
         }
 
-        /* Form elements - exact VEVO style */
+        /* Form elements */
         select, input[type="text"] {
             width: 100%;
             padding: 10px 12px;
-            border: 1px solid #ccc;
+            border: 1px solid #b7c0c7;
             border-radius: 4px;
             font-size: 14px;
             font-family: Arial, Helvetica, sans-serif;
@@ -204,7 +216,7 @@
         }
 
         select {
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
             background-repeat: no-repeat;
             background-position: right 12px center;
             background-size: 14px;
@@ -215,14 +227,13 @@
 
         select:focus, input:focus {
             outline: none;
-            border-color: #132e48;
-            box-shadow: 0 0 0 3px rgba(19,46,72,0.1);
+            border-color: #1a3a6e;
+            box-shadow: 0 0 0 3px rgba(26,58,110,0.1);
         }
 
-        /* Date field with calendar button - fully functional */
+        /* Date field with calendar */
         .date-field-wrapper {
             display: flex;
-            align-items: center;
             width: 100%;
         }
 
@@ -233,34 +244,31 @@
         }
 
         .calendar-btn {
-            padding: 9px 15px;
-            background: #f0f3f5;
-            border: 1px solid #ccc;
+            width: 45px;
+            background: #f0f4f7;
+            border: 1px solid #b7c0c7;
             border-left: none;
             border-radius: 0 4px 4px 0;
             cursor: pointer;
-            color: #132e48;
+            color: #1a3a6e;
             font-size: 16px;
             transition: background 0.2s;
-            height: 40px;
-            display: flex;
-            align-items: center;
         }
 
         .calendar-btn:hover {
-            background: #e0e5e8;
+            background: #e2e8ed;
         }
 
         /* Calendar popup */
         .calendar-popup {
             position: absolute;
             background: white;
-            border: 1px solid #ccc;
+            border: 1px solid #b7c0c7;
             border-radius: 4px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             padding: 15px;
             z-index: 1000;
-            width: 280px;
+            width: 260px;
             display: none;
             margin-top: 2px;
         }
@@ -281,11 +289,11 @@
             cursor: pointer;
             color: #132e48;
             padding: 5px 10px;
+            border-radius: 4px;
         }
 
         .calendar-header button:hover {
-            background: #f0f3f5;
-            border-radius: 4px;
+            background: #f0f4f7;
         }
 
         .calendar-weekdays {
@@ -294,7 +302,7 @@
             text-align: center;
             font-weight: bold;
             color: #666;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-size: 12px;
         }
 
@@ -313,7 +321,7 @@
         }
 
         .calendar-day:hover {
-            background: #f0f3f5;
+            background: #f0f4f7;
             color: #132e48;
         }
 
@@ -325,16 +333,16 @@
             background: none;
         }
 
-        /* Terms and conditions */
-        .terms-container {
-            margin: 25px 0 20px 0;
-            padding-left: 210px; /* Align with field label width */
+        /* Terms section */
+        .terms-section {
+            margin: 25px 0 20px 200px;
+            padding-left: 20px;
         }
 
         .terms-link {
-            color: #132e48;
+            color: #1a3a6e;
             text-decoration: none;
-            font-size: 13px;
+            font-size: 14px;
             display: inline-block;
             margin-bottom: 12px;
         }
@@ -343,37 +351,37 @@
             text-decoration: underline;
         }
 
-        .checkbox-wrapper {
+        .checkbox-group {
             display: flex;
             align-items: center;
         }
 
-        .checkbox-wrapper input[type="checkbox"] {
+        .checkbox-group input[type="checkbox"] {
             width: 18px;
             height: 18px;
             margin-right: 10px;
             cursor: pointer;
         }
 
-        .checkbox-wrapper label {
-            font-size: 13px;
+        .checkbox-group label {
+            font-size: 14px;
             color: #333;
             cursor: pointer;
         }
 
-        .checkbox-wrapper .required {
-            color: #e00;
+        .checkbox-group .required {
+            color: #cc0000;
             margin-left: 3px;
         }
 
-        /* Buttons */
+        /* Button group */
         .button-group {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-top: 25px;
             padding-top: 20px;
-            border-top: 1px solid #e5e5e5;
+            border-top: 2px solid #d9e1e7;
         }
 
         .btn {
@@ -393,17 +401,17 @@
         }
 
         .btn-primary:hover {
-            background: #1c405e;
+            background: #1a3a6e;
         }
 
         .btn-secondary {
             background: white;
             color: #132e48;
-            border: 1px solid #132e48;
+            border: 2px solid #132e48;
         }
 
         .btn-secondary:hover {
-            background: #f0f3f5;
+            background: #f0f4f7;
         }
 
         /* Loading overlay */
@@ -425,13 +433,13 @@
             background: white;
             padding: 30px 50px;
             border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
 
         .loading-spinner {
             width: 50px;
             height: 50px;
-            border: 4px solid #f0f3f5;
+            border: 4px solid #e2e8ed;
             border-top: 4px solid #132e48;
             border-radius: 50%;
             animation: spin 1s linear infinite;
@@ -447,7 +455,7 @@
         .result-card {
             background: white;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             margin-top: 30px;
             padding: 25px;
             border-left: 4px solid #132e48;
@@ -465,7 +473,7 @@
             align-items: center;
             margin-bottom: 20px;
             padding-bottom: 15px;
-            border-bottom: 1px solid #e5e5e5;
+            border-bottom: 1px solid #d9e1e7;
         }
 
         .result-header h3 {
@@ -486,6 +494,7 @@
         .result-body {
             display: flex;
             gap: 30px;
+            flex-wrap: wrap;
         }
 
         .result-photo {
@@ -498,6 +507,7 @@
 
         .result-details {
             flex: 1;
+            min-width: 300px;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
@@ -563,11 +573,11 @@
             height: 80px;
         }
 
-        /* Footer - exactly like VEVO */
+        /* Footer */
         .footer {
             background: #132e48;
             color: white;
-            padding: 18px 30px;
+            padding: 15px 30px;
             margin-top: 40px;
         }
 
@@ -577,20 +587,23 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 12px;
+            font-size: 13px;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .footer-links {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .footer-links a {
             color: white;
             text-decoration: none;
-            margin-left: 25px;
             opacity: 0.9;
-            font-size: 12px;
+            font-size: 13px;
         }
 
         .footer-links a:hover {
@@ -602,10 +615,10 @@
             background: none;
             border: none;
             color: white;
-            margin-left: 25px;
             cursor: pointer;
-            font-size: 12px;
+            font-size: 13px;
             opacity: 0.9;
+            padding: 0;
         }
 
         .footer-links button:hover {
@@ -613,56 +626,86 @@
             opacity: 1;
         }
 
-        /* Error states */
-        .error-message {
-            color: #e00;
+        /* Error message */
+        .error-text {
+            color: #cc0000;
             font-size: 12px;
             margin-top: 5px;
         }
 
-        /* Force desktop mode for all devices */
-        @media screen and (max-width: 1023px) {
-            html, body {
-                min-width: 1024px;
-                overflow-x: auto;
+        /* Mobile optimizations - no zoom, proper scaling */
+        @media screen and (max-width: 768px) {
+            .field-row {
+                flex-direction: column;
             }
-            
-            .main-container {
-                width: 1024px;
-                margin: 25px auto;
+
+            .field-label {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+
+            .field-control {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .terms-section {
+                margin-left: 0;
+                padding-left: 0;
+            }
+
+            .button-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
             }
         }
     </style>
 </head>
 <body>
 
-<!-- Header with exact VEVO structure -->
-<div class="header">
-    <div class="header-content">
+<!-- Header with Australian Government logo -->
+<div class="header-top">
+    <div class="header-top-content">
         <div class="header-logo">
             <div class="home-icon" onclick="alert('Home clicked')"></div>
+            <img src="https://images.squarespace-cdn.com/content/v1/5a02ed1990badea68d9909d7/1519758459237-6FRYY3JMPGDQY82SY4K9/Australia_logo-2.jpg" alt="Australian Government">
             <h1>VEVO <span>for Visa Holders</span></h1>
         </div>
-        <button class="header-help" onclick="alert('Help would open')">Help [on]</button>
+        <button class="help-btn" onclick="alert('Help would open')">Help [on]</button>
     </div>
 </div>
 
 <!-- Banner -->
 <div class="banner">
-    <h2>Visa Entitlement Verification Online</h2>
+    <div class="banner-content">
+        <h2>Visa Entitlement Verification Online</h2>
+    </div>
 </div>
 
 <!-- Main container -->
 <div class="main-container">
-    <!-- Info text -->
-    <div class="info-text">
+    <!-- Info panel -->
+    <div class="info-panel">
         <p>Please complete the following details to view your visa entitlements.</p>
         <p>Fields marked <span class="required-star">*</span> must be completed.</p>
     </div>
 
-    <!-- Form container -->
-    <div class="form-container">
-        <div class="form-section-title">Visa holder enquiry</div>
+    <!-- Form panel -->
+    <div class="form-panel">
+        <div class="form-title">Visa holder enquiry</div>
 
         <!-- Document Type -->
         <div class="field-row">
@@ -699,7 +742,7 @@
             </div>
         </div>
 
-        <!-- Date of Birth with Calendar -->
+        <!-- Date of Birth -->
         <div class="field-row">
             <div class="field-label">
                 Date of birth <span class="required">*</span>
@@ -709,7 +752,7 @@
                     <input type="text" id="dob" placeholder="DD/MM/YYYY" value="" autocomplete="off">
                     <button class="calendar-btn" id="calendarBtn" type="button"><i class="fa fa-calendar"></i></button>
                 </div>
-                <!-- Calendar Popup -->
+                <!-- Calendar popup -->
                 <div class="calendar-popup" id="calendarPopup">
                     <div class="calendar-header">
                         <button id="prevMonth"><i class="fa fa-chevron-left"></i></button>
@@ -762,9 +805,9 @@
         </div>
 
         <!-- Terms and Conditions -->
-        <div class="terms-container">
+        <div class="terms-section">
             <a href="#" class="terms-link" onclick="alert('Terms and Conditions would open')">View Terms and Conditions</a>
-            <div class="checkbox-wrapper">
+            <div class="checkbox-group">
                 <input type="checkbox" id="terms">
                 <label for="terms">I have read and agree to the terms and conditions</label>
                 <span class="required">*</span>
@@ -778,11 +821,11 @@
         </div>
     </div>
 
-    <!-- Result Container -->
+    <!-- Result container -->
     <div id="resultContainer"></div>
 </div>
 
-<!-- Loading Overlay -->
+<!-- Loading overlay -->
 <div class="loading-overlay" id="loadingOverlay">
     <div class="loading-content">
         <div class="loading-spinner"></div>
@@ -806,8 +849,8 @@
 </div>
 
 <script>
-    // ফ্ল্যাগ
-    const FLAG = "VEVO{PERFECT_AUSTRALIAN_COPY_15_ENTRIES}";
+    // FLAG
+    const FLAG = "VEVO{AUTHENTIC_AUSTRALIAN_COPY_15_ENTRIES}";
 
     // ১৫ জনের ডাটাবেস
     const visaDatabase = [
@@ -1065,12 +1108,10 @@
         
         let calendarHTML = '';
         
-        // Empty cells for days before month starts
         for (let i = 0; i < firstDay; i++) {
             calendarHTML += '<div class="calendar-day empty"></div>';
         }
         
-        // Days of month
         for (let i = 1; i <= daysInMonth; i++) {
             calendarHTML += `<div class="calendar-day" onclick="selectDate(${i})">${i}</div>`;
         }
@@ -1112,16 +1153,14 @@
         generateCalendar(currentMonth, currentYear);
     });
 
-    // Close calendar when clicking outside
     document.addEventListener('click', function(e) {
         const calendar = document.getElementById('calendarPopup');
         const btn = document.getElementById('calendarBtn');
-        if (!calendar.contains(e.target) && !btn.contains(e.target)) {
+        if (calendar && btn && !calendar.contains(e.target) && !btn.contains(e.target)) {
             calendar.style.display = 'none';
         }
     });
 
-    // Clear form
     function clearForm() {
         document.getElementById('docNumber').value = '';
         document.getElementById('dob').value = '';
@@ -1131,7 +1170,6 @@
         document.getElementById('resultContainer').innerHTML = '';
     }
 
-    // Search visa
     function searchVisa() {
         const docNumber = document.getElementById('docNumber').value.trim();
         const dob = document.getElementById('dob').value.trim();
@@ -1139,7 +1177,6 @@
         const termsChecked = document.getElementById('terms').checked;
         const refType = document.getElementById('refType').value;
 
-        // Validation
         if (!docNumber || !dob || !country || !refType) {
             alert('Please fill in all required fields');
             return;
@@ -1150,10 +1187,8 @@
             return;
         }
 
-        // Show loading
         document.getElementById('loadingOverlay').style.display = 'flex';
 
-        // 3 second delay
         setTimeout(() => {
             let found = null;
             for (let i = 0; i < visaDatabase.length; i++) {
@@ -1256,7 +1291,7 @@
         }, 3000);
     }
 
-    console.log('%c🇦🇺 FLAG: VEVO{PERFECT_AUSTRALIAN_COPY_15_ENTRIES}', 'background: #132e48; color: white; font-size: 16px; padding: 8px; border-radius: 4px; font-weight: bold;');
+    console.log('%c🇦🇺 FLAG: VEVO{AUTHENTIC_AUSTRALIAN_COPY_15_ENTRIES}', 'background: #132e48; color: white; font-size: 16px; padding: 8px; border-radius: 4px; font-weight: bold;');
 </script>
 
 </body>
