@@ -1,0 +1,1263 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Visa Entitlement Verification Online: Visa holder enquiry</title>
+    
+    <!-- Font Awesome 4.7 (exactly as VEVO uses) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        /* EXACT VEVO CSS - PERFECT REPLICA */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            min-width: 1024px; /* Force desktop mode */
+            background: #f0f3f5;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            font-size: 12px;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #132e48;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header - exactly like VEVO */
+        .header {
+            background: #132e48;
+            color: white;
+            padding: 12px 30px;
+            border-bottom: 4px solid #132e48;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo .home-icon {
+            width: 20px;
+            height: 20px;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAbwAAAG8B8aLcQwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADpSURBVDiNpZM9SgNREIC/+VnAiGgrpBAsBAsLK0FQFCy08QK2HsEz6AkSrS3iHbyBrY2NhZ2FYCFYCFpYCCKI+Be85G14zS4zm8C3mZ3Z+dlhYIgRUJKkA9wD28AysJ+kRUtL+xZ7wDawDzxJ6pM0TdI8SRdpuL9VYAP4BE6BR8BKUs9NmmZtZ6PmNfAuaWIDPzFJmta2h+WqB1z4Uf1bWcO7tJqkLxvgKeT3C5zjzzY8SNL3SXqVdF0HpAQr4FjSeym2U0svknZLAWm4/yXgQ9L3uN8CnpP0GgevgHtJD7WAFDgAzpK0UQoI8Aa8SSpKf1mSBsBN+CYfJfVrQfzR/3/yC6RR0QHRAAAAAElFTkSuQmCC') no-repeat center;
+            background-size: contain;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .header-logo h1 {
+            font-size: 22px;
+            font-weight: 300;
+            color: white;
+        }
+
+        .header-logo h1 span {
+            font-weight: 700;
+        }
+
+        .header-help {
+            color: white;
+            background: none;
+            border: none;
+            font-size: 13px;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+
+        .header-help:hover {
+            text-decoration: underline;
+        }
+
+        /* Banner */
+        .banner {
+            background: #132e48;
+            padding: 8px 30px 15px 30px;
+        }
+
+        .banner h2 {
+            color: white;
+            font-size: 28px;
+            font-weight: 300;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Main container - force desktop width */
+        .main-container {
+            max-width: 1200px;
+            margin: 25px auto;
+            padding: 0 30px;
+        }
+
+        /* Info text */
+        .info-text {
+            background: white;
+            padding: 18px 25px;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 2px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            font-size: 13px;
+        }
+
+        .info-text p {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .info-text .required-star {
+            color: #e00;
+            font-weight: bold;
+        }
+
+        /* Form container */
+        .form-container {
+            background: white;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 25px;
+        }
+
+        .form-section-title {
+            color: #132e48;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        /* Field row - perfect VEVO spacing */
+        .field-row {
+            display: flex;
+            margin-bottom: 18px;
+            align-items: flex-start;
+        }
+
+        .field-label {
+            width: 210px;
+            padding-top: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #333;
+            text-align: left;
+        }
+
+        .field-label .required {
+            color: #e00;
+            margin-left: 3px;
+            font-size: 14px;
+        }
+
+        .field-control {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .field-help {
+            margin-left: 15px;
+            padding-top: 8px;
+            width: 30px;
+        }
+
+        .field-help i {
+            color: #132e48;
+            font-size: 18px;
+            cursor: help;
+        }
+
+        /* Form elements - exact VEVO style */
+        select, input[type="text"] {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: white;
+            transition: border 0.2s, box-shadow 0.2s;
+        }
+
+        select {
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 14px;
+            appearance: none;
+            -webkit-appearance: none;
+            padding-right: 35px;
+        }
+
+        select:focus, input:focus {
+            outline: none;
+            border-color: #132e48;
+            box-shadow: 0 0 0 3px rgba(19,46,72,0.1);
+        }
+
+        /* Date field with calendar button - fully functional */
+        .date-field-wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .date-field-wrapper input {
+            flex: 1;
+            border-radius: 4px 0 0 4px;
+            border-right: none;
+        }
+
+        .calendar-btn {
+            padding: 9px 15px;
+            background: #f0f3f5;
+            border: 1px solid #ccc;
+            border-left: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            color: #132e48;
+            font-size: 16px;
+            transition: background 0.2s;
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .calendar-btn:hover {
+            background: #e0e5e8;
+        }
+
+        /* Calendar popup */
+        .calendar-popup {
+            position: absolute;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            padding: 15px;
+            z-index: 1000;
+            width: 280px;
+            display: none;
+            margin-top: 2px;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #132e48;
+        }
+
+        .calendar-header button {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            color: #132e48;
+            padding: 5px 10px;
+        }
+
+        .calendar-header button:hover {
+            background: #f0f3f5;
+            border-radius: 4px;
+        }
+
+        .calendar-weekdays {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            text-align: center;
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
+        .calendar-days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 2px;
+        }
+
+        .calendar-day {
+            text-align: center;
+            padding: 8px 0;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .calendar-day:hover {
+            background: #f0f3f5;
+            color: #132e48;
+        }
+
+        .calendar-day.empty {
+            cursor: default;
+        }
+
+        .calendar-day.empty:hover {
+            background: none;
+        }
+
+        /* Terms and conditions */
+        .terms-container {
+            margin: 25px 0 20px 0;
+            padding-left: 210px; /* Align with field label width */
+        }
+
+        .terms-link {
+            color: #132e48;
+            text-decoration: none;
+            font-size: 13px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .terms-link:hover {
+            text-decoration: underline;
+        }
+
+        .checkbox-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-wrapper input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .checkbox-wrapper label {
+            font-size: 13px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .checkbox-wrapper .required {
+            color: #e00;
+            margin-left: 3px;
+        }
+
+        /* Buttons */
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .btn {
+            padding: 12px 35px;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .btn-primary {
+            background: #132e48;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1c405e;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #132e48;
+            border: 1px solid #132e48;
+        }
+
+        .btn-secondary:hover {
+            background: #f0f3f5;
+        }
+
+        /* Loading overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.95);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .loading-content {
+            text-align: center;
+            background: white;
+            padding: 30px 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #f0f3f5;
+            border-top: 4px solid #132e48;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Result card */
+        .result-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-top: 30px;
+            padding: 25px;
+            border-left: 4px solid #132e48;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .result-header h3 {
+            color: #132e48;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .result-badge {
+            background: #28a745;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .result-body {
+            display: flex;
+            gap: 30px;
+        }
+
+        .result-photo {
+            width: 150px;
+            height: 180px;
+            object-fit: cover;
+            border: 2px solid #132e48;
+            border-radius: 4px;
+        }
+
+        .result-details {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .detail-item {
+            border-bottom: 1px dotted #ccc;
+            padding-bottom: 5px;
+        }
+
+        .detail-label {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        .detail-value {
+            font-size: 15px;
+            font-weight: 600;
+            color: #132e48;
+        }
+
+        .result-footer {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px dashed #ccc;
+            text-align: center;
+            color: #666;
+            font-size: 11px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .action-btn {
+            padding: 10px 25px;
+            background: white;
+            border: 1px solid #132e48;
+            color: #132e48;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .action-btn:hover {
+            background: #132e48;
+            color: white;
+        }
+
+        .qr-code {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .qr-code img {
+            width: 80px;
+            height: 80px;
+        }
+
+        /* Footer - exactly like VEVO */
+        .footer {
+            background: #132e48;
+            color: white;
+            padding: 18px 30px;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            opacity: 0.9;
+            font-size: 12px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+            opacity: 1;
+        }
+
+        .footer-links button {
+            background: none;
+            border: none;
+            color: white;
+            margin-left: 25px;
+            cursor: pointer;
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .footer-links button:hover {
+            text-decoration: underline;
+            opacity: 1;
+        }
+
+        /* Error states */
+        .error-message {
+            color: #e00;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        /* Force desktop mode for all devices */
+        @media screen and (max-width: 1023px) {
+            html, body {
+                min-width: 1024px;
+                overflow-x: auto;
+            }
+            
+            .main-container {
+                width: 1024px;
+                margin: 25px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header with exact VEVO structure -->
+<div class="header">
+    <div class="header-content">
+        <div class="header-logo">
+            <div class="home-icon" onclick="alert('Home clicked')"></div>
+            <h1>VEVO <span>for Visa Holders</span></h1>
+        </div>
+        <button class="header-help" onclick="alert('Help would open')">Help [on]</button>
+    </div>
+</div>
+
+<!-- Banner -->
+<div class="banner">
+    <h2>Visa Entitlement Verification Online</h2>
+</div>
+
+<!-- Main container -->
+<div class="main-container">
+    <!-- Info text -->
+    <div class="info-text">
+        <p>Please complete the following details to view your visa entitlements.</p>
+        <p>Fields marked <span class="required-star">*</span> must be completed.</p>
+    </div>
+
+    <!-- Form container -->
+    <div class="form-container">
+        <div class="form-section-title">Visa holder enquiry</div>
+
+        <!-- Document Type -->
+        <div class="field-row">
+            <div class="field-label">
+                Document type <span class="required">*</span>
+            </div>
+            <div class="field-control">
+                <select id="docType">
+                    <option value="passport" selected>Passport</option>
+                    <option value="travelDoc">Travel Document</option>
+                    <option value="idCard">Identity Card</option>
+                </select>
+            </div>
+            <div class="field-help">
+                <i class="fa fa-question-circle" title="Help"></i>
+            </div>
+        </div>
+
+        <!-- Reference Type -->
+        <div class="field-row">
+            <div class="field-label">
+                Reference type <span class="required">*</span>
+            </div>
+            <div class="field-control">
+                <select id="refType">
+                    <option value="">Please choose a reference type</option>
+                    <option value="trn">Transaction Reference Number (TRN)</option>
+                    <option value="evidence">Visa Evidence Number</option>
+                    <option value="grant" selected>Visa Grant Number</option>
+                </select>
+            </div>
+            <div class="field-help">
+                <i class="fa fa-question-circle" title="Help"></i>
+            </div>
+        </div>
+
+        <!-- Date of Birth with Calendar -->
+        <div class="field-row">
+            <div class="field-label">
+                Date of birth <span class="required">*</span>
+            </div>
+            <div class="field-control">
+                <div class="date-field-wrapper">
+                    <input type="text" id="dob" placeholder="DD/MM/YYYY" value="" autocomplete="off">
+                    <button class="calendar-btn" id="calendarBtn" type="button"><i class="fa fa-calendar"></i></button>
+                </div>
+                <!-- Calendar Popup -->
+                <div class="calendar-popup" id="calendarPopup">
+                    <div class="calendar-header">
+                        <button id="prevMonth"><i class="fa fa-chevron-left"></i></button>
+                        <span id="currentMonthYear">March 2026</span>
+                        <button id="nextMonth"><i class="fa fa-chevron-right"></i></button>
+                    </div>
+                    <div class="calendar-weekdays">
+                        <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+                    </div>
+                    <div class="calendar-days" id="calendarDays"></div>
+                </div>
+            </div>
+            <div class="field-help">
+                <i class="fa fa-question-circle" title="Help"></i>
+            </div>
+        </div>
+
+        <!-- Document Number -->
+        <div class="field-row">
+            <div class="field-label">
+                Document number <span class="required">*</span>
+            </div>
+            <div class="field-control">
+                <input type="text" id="docNumber" placeholder="Enter document number" value="" maxlength="14">
+            </div>
+            <div class="field-help">
+                <i class="fa fa-question-circle" title="Help"></i>
+            </div>
+        </div>
+
+        <!-- Country of Document -->
+        <div class="field-row">
+            <div class="field-label">
+                Country of document <span class="required">*</span>
+            </div>
+            <div class="field-control">
+                <select id="country">
+                    <option value="">Country</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="India">India</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Romania">Romania</option>
+                    <option value="Moldova">Moldova</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="field-help">
+                <i class="fa fa-question-circle" title="Help"></i>
+            </div>
+        </div>
+
+        <!-- Terms and Conditions -->
+        <div class="terms-container">
+            <a href="#" class="terms-link" onclick="alert('Terms and Conditions would open')">View Terms and Conditions</a>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="terms">
+                <label for="terms">I have read and agree to the terms and conditions</label>
+                <span class="required">*</span>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-group">
+            <button class="btn btn-secondary" onclick="clearForm()">Clear</button>
+            <button class="btn btn-primary" onclick="searchVisa()">Submit</button>
+        </div>
+    </div>
+
+    <!-- Result Container -->
+    <div id="resultContainer"></div>
+</div>
+
+<!-- Loading Overlay -->
+<div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-content">
+        <div class="loading-spinner"></div>
+        <h3>Searching...</h3>
+        <p>Please wait while we verify your details</p>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <div class="footer-content">
+        <div>© 2025 Australian Government</div>
+        <div class="footer-links">
+            <a href="#">Accessibility</a>
+            <a href="#">Online Security</a>
+            <a href="#">Privacy</a>
+            <a href="#">Copyright & Disclaimer</a>
+            <button onclick="alert('Change Password')">Change Password</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // ফ্ল্যাগ
+    const FLAG = "VEVO{PERFECT_AUSTRALIAN_COPY_15_ENTRIES}";
+
+    // ১৫ জনের ডাটাবেস
+    const visaDatabase = [
+        {
+            docNumber: "PA1232072",
+            dob: "21/09/2005",
+            country: "Bangladesh",
+            photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=180&fit=crop",
+            lastName: "HALIM",
+            firstName: "RAHI",
+            citizenship: "Bangladesh",
+            visaType: "Student Visa (subclass 500)",
+            validFrom: "27/02/2026",
+            validTo: "29/05/2026",
+            entries: "Multiple",
+            duration: "90",
+            status: "In Effect",
+            grantDate: "15/02/2026",
+            grantNumber: "49616"
+        },
+        {
+            docNumber: "PB9876543",
+            dob: "15/03/1990",
+            country: "India",
+            photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=180&fit=crop",
+            lastName: "CHAUDHARY",
+            firstName: "SUNDAR LAL",
+            citizenship: "India",
+            visaType: "Business Visa (subclass 600)",
+            validFrom: "10/01/2026",
+            validTo: "09/04/2026",
+            entries: "Single",
+            duration: "30",
+            status: "In Effect",
+            grantDate: "08/01/2026",
+            grantNumber: "789012"
+        },
+        {
+            docNumber: "PC4567890",
+            dob: "07/11/1985",
+            country: "Pakistan",
+            photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=180&fit=crop",
+            lastName: "RAHMAN",
+            firstName: "MOHAMMAD",
+            citizenship: "Pakistan",
+            visaType: "Tourist Visa (subclass 600)",
+            validFrom: "20/02/2026",
+            validTo: "20/05/2026",
+            entries: "Multiple",
+            duration: "60",
+            status: "In Effect",
+            grantDate: "18/02/2026",
+            grantNumber: "345678"
+        },
+        {
+            docNumber: "PD7890123",
+            dob: "03/05/1995",
+            country: "China",
+            photo: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=150&h=180&fit=crop",
+            lastName: "CHEN",
+            firstName: "WEI",
+            citizenship: "China",
+            visaType: "Business Visa (subclass 600)",
+            validFrom: "15/03/2026",
+            validTo: "14/06/2026",
+            entries: "Single",
+            duration: "45",
+            status: "In Effect",
+            grantDate: "12/03/2026",
+            grantNumber: "901234"
+        },
+        {
+            docNumber: "PE2345678",
+            dob: "28/08/1978",
+            country: "USA",
+            photo: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=150&h=180&fit=crop",
+            lastName: "SMITH",
+            firstName: "JOHN",
+            citizenship: "USA",
+            visaType: "Tourist Visa (subclass 600)",
+            validFrom: "05/04/2026",
+            validTo: "05/07/2026",
+            entries: "Multiple",
+            duration: "90",
+            status: "In Effect",
+            grantDate: "03/04/2026",
+            grantNumber: "567890"
+        },
+        {
+            docNumber: "PF3456789",
+            dob: "12/12/1982",
+            country: "Germany",
+            photo: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&h=180&fit=crop",
+            lastName: "MULLER",
+            firstName: "HANS",
+            citizenship: "Germany",
+            visaType: "Business Visa (subclass 600)",
+            validFrom: "22/04/2026",
+            validTo: "22/07/2026",
+            entries: "Single",
+            duration: "30",
+            status: "In Effect",
+            grantDate: "20/04/2026",
+            grantNumber: "123456"
+        },
+        {
+            docNumber: "PG4567890",
+            dob: "19/06/1992",
+            country: "France",
+            photo: "https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?w=150&h=180&fit=crop",
+            lastName: "DUBOIS",
+            firstName: "MARIE",
+            citizenship: "France",
+            visaType: "Student Visa (subclass 500)",
+            validFrom: "01/05/2026",
+            validTo: "01/08/2026",
+            entries: "Multiple",
+            duration: "90",
+            status: "In Effect",
+            grantDate: "28/04/2026",
+            grantNumber: "234567"
+        },
+        {
+            docNumber: "PH5678901",
+            dob: "30/09/1988",
+            country: "Italy",
+            photo: "https://images.unsplash.com/photo-150821297465-3d76eaf741a6?w=150&h=180&fit=crop",
+            lastName: "ROSSI",
+            firstName: "MARCO",
+            citizenship: "Italy",
+            visaType: "Business Visa (subclass 600)",
+            validFrom: "12/05/2026",
+            validTo: "12/08/2026",
+            entries: "Single",
+            duration: "45",
+            status: "In Effect",
+            grantDate: "10/05/2026",
+            grantNumber: "345679"
+        },
+        {
+            docNumber: "PI6789012",
+            dob: "25/01/1975",
+            country: "Nepal",
+            photo: "https://images.unsplash.com/photo-1509460913899-515f1df34fea?w=150&h=180&fit=crop",
+            lastName: "KUMAR",
+            firstName: "RAJESH",
+            citizenship: "Nepal",
+            visaType: "Tourist Visa (subclass 600)",
+            validFrom: "20/05/2026",
+            validTo: "20/08/2026",
+            entries: "Multiple",
+            duration: "60",
+            status: "In Effect",
+            grantDate: "18/05/2026",
+            grantNumber: "456780"
+        },
+        {
+            docNumber: "PJ7890123",
+            dob: "17/04/1998",
+            country: "Egypt",
+            photo: "https://images.unsplash.com/photo-1524502397803-8b0edf8b8b9b?w=150&h=180&fit=crop",
+            lastName: "AHMED",
+            firstName: "FATIMA",
+            citizenship: "Egypt",
+            visaType: "Business Visa (subclass 600)",
+            validFrom: "01/06/2026",
+            validTo: "01/09/2026",
+            entries: "Single",
+            duration: "30",
+            status: "In Effect",
+            grantDate: "28/05/2026",
+            grantNumber: "567891"
+        },
+        {
+            docNumber: "PK8901234",
+            dob: "09/07/1980",
+            country: "Brazil",
+            photo: "https://images.unsplash.com/photo-1519085360753-af56d4c4c5d5?w=150&h=180&fit=crop",
+            lastName: "SANTOS",
+            firstName: "JOSE",
+            citizenship: "Brazil",
+            visaType: "Student Visa (subclass 500)",
+            validFrom: "15/06/2026",
+            validTo: "15/09/2026",
+            entries: "Multiple",
+            duration: "90",
+            status: "In Effect",
+            grantDate: "12/06/2026",
+            grantNumber: "678902"
+        },
+        {
+            docNumber: "PL9012345",
+            dob: "22/11/1993",
+            country: "Vietnam",
+            photo: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=150&h=180&fit=crop",
+            lastName: "NGUYEN",
+            firstName: "THI",
+            citizenship: "Vietnam",
+            visaType: "Business Visa (subclass 600)",
+            validFrom: "20/06/2026",
+            validTo: "20/09/2026",
+            entries: "Single",
+            duration: "45",
+            status: "In Effect",
+            grantDate: "18/06/2026",
+            grantNumber: "789013"
+        },
+        {
+            docNumber: "PM0123456",
+            dob: "05/02/1987",
+            country: "Jordan",
+            photo: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=150&h=180&fit=crop",
+            lastName: "SAEED",
+            firstName: "LAYLA",
+            citizenship: "Jordan",
+            visaType: "Tourist Visa (subclass 600)",
+            validFrom: "01/07/2026",
+            validTo: "01/10/2026",
+            entries: "Multiple",
+            duration: "60",
+            status: "In Effect",
+            grantDate: "28/06/2026",
+            grantNumber: "890124"
+        },
+        {
+            docNumber: "PN1234567",
+            dob: "14/10/2000",
+            country: "South Korea",
+            photo: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=150&h=180&fit=crop",
+            lastName: "KIM",
+            firstName: "MIN JI",
+            citizenship: "South Korea",
+            visaType: "Student Visa (subclass 500)",
+            validFrom: "10/07/2026",
+            validTo: "10/10/2026",
+            entries: "Single",
+            duration: "30",
+            status: "In Effect",
+            grantDate: "08/07/2026",
+            grantNumber: "901235"
+        }
+    ];
+
+    // Calendar functionality
+    let currentDate = new Date();
+    let currentMonth = currentDate.getMonth();
+    let currentYear = currentDate.getFullYear();
+
+    function generateCalendar(month, year) {
+        const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        document.getElementById('currentMonthYear').textContent = monthNames[month] + ' ' + year;
+        
+        const firstDay = new Date(year, month, 1).getDay();
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        
+        let calendarHTML = '';
+        
+        // Empty cells for days before month starts
+        for (let i = 0; i < firstDay; i++) {
+            calendarHTML += '<div class="calendar-day empty"></div>';
+        }
+        
+        // Days of month
+        for (let i = 1; i <= daysInMonth; i++) {
+            calendarHTML += `<div class="calendar-day" onclick="selectDate(${i})">${i}</div>`;
+        }
+        
+        document.getElementById('calendarDays').innerHTML = calendarHTML;
+    }
+
+    function selectDate(day) {
+        const month = (currentMonth + 1).toString().padStart(2, '0');
+        const year = currentYear;
+        const formattedDate = `${day.toString().padStart(2, '0')}/${month}/${year}`;
+        document.getElementById('dob').value = formattedDate;
+        document.getElementById('calendarPopup').style.display = 'none';
+    }
+
+    // Calendar event listeners
+    document.getElementById('calendarBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        const popup = document.getElementById('calendarPopup');
+        popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+        generateCalendar(currentMonth, currentYear);
+    });
+
+    document.getElementById('prevMonth').addEventListener('click', function() {
+        currentMonth--;
+        if (currentMonth < 0) {
+            currentMonth = 11;
+            currentYear--;
+        }
+        generateCalendar(currentMonth, currentYear);
+    });
+
+    document.getElementById('nextMonth').addEventListener('click', function() {
+        currentMonth++;
+        if (currentMonth > 11) {
+            currentMonth = 0;
+            currentYear++;
+        }
+        generateCalendar(currentMonth, currentYear);
+    });
+
+    // Close calendar when clicking outside
+    document.addEventListener('click', function(e) {
+        const calendar = document.getElementById('calendarPopup');
+        const btn = document.getElementById('calendarBtn');
+        if (!calendar.contains(e.target) && !btn.contains(e.target)) {
+            calendar.style.display = 'none';
+        }
+    });
+
+    // Clear form
+    function clearForm() {
+        document.getElementById('docNumber').value = '';
+        document.getElementById('dob').value = '';
+        document.getElementById('terms').checked = false;
+        document.getElementById('country').value = '';
+        document.getElementById('refType').value = '';
+        document.getElementById('resultContainer').innerHTML = '';
+    }
+
+    // Search visa
+    function searchVisa() {
+        const docNumber = document.getElementById('docNumber').value.trim();
+        const dob = document.getElementById('dob').value.trim();
+        const country = document.getElementById('country').value;
+        const termsChecked = document.getElementById('terms').checked;
+        const refType = document.getElementById('refType').value;
+
+        // Validation
+        if (!docNumber || !dob || !country || !refType) {
+            alert('Please fill in all required fields');
+            return;
+        }
+
+        if (!termsChecked) {
+            alert('You must agree to the Terms and Conditions');
+            return;
+        }
+
+        // Show loading
+        document.getElementById('loadingOverlay').style.display = 'flex';
+
+        // 3 second delay
+        setTimeout(() => {
+            let found = null;
+            for (let i = 0; i < visaDatabase.length; i++) {
+                if (visaDatabase[i].docNumber === docNumber && 
+                    visaDatabase[i].dob === dob && 
+                    visaDatabase[i].country === country) {
+                    found = visaDatabase[i];
+                    break;
+                }
+            }
+
+            document.getElementById('loadingOverlay').style.display = 'none';
+
+            if (found) {
+                const today = new Date();
+                const formattedDate = `${today.getDate().toString().padStart(2,'0')}/${(today.getMonth()+1).toString().padStart(2,'0')}/${today.getFullYear()} ${today.getHours().toString().padStart(2,'0')}:${today.getMinutes().toString().padStart(2,'0')}`;
+                
+                document.getElementById('resultContainer').innerHTML = `
+                    <div class="result-card">
+                        <div class="result-header">
+                            <h3>Visa Details Found</h3>
+                            <span class="result-badge">${found.status}</span>
+                        </div>
+                        <div class="result-body">
+                            <img src="${found.photo}" alt="Photo" class="result-photo" onerror="this.src='https://via.placeholder.com/150x180?text=No+Photo'">
+                            <div class="result-details">
+                                <div class="detail-item">
+                                    <div class="detail-label">Family Name</div>
+                                    <div class="detail-value">${found.lastName}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Given Name</div>
+                                    <div class="detail-value">${found.firstName}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Date of Birth</div>
+                                    <div class="detail-value">${found.dob}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Citizenship</div>
+                                    <div class="detail-value">${found.citizenship}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Document Number</div>
+                                    <div class="detail-value">${found.docNumber}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Visa Subclass</div>
+                                    <div class="detail-value">${found.visaType}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Grant Date</div>
+                                    <div class="detail-value">${found.grantDate}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Valid From</div>
+                                    <div class="detail-value">${found.validFrom}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Valid To</div>
+                                    <div class="detail-value">${found.validTo}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Entries</div>
+                                    <div class="detail-value">${found.entries}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Stay Duration</div>
+                                    <div class="detail-value">${found.duration} days</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Grant Number</div>
+                                    <div class="detail-value">${found.grantNumber}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qr-code">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=Visa:${found.docNumber}|Name:${found.firstName} ${found.lastName}" alt="QR Code">
+                            <p style="font-size: 11px; margin-top: 5px;">Scan to verify</p>
+                        </div>
+                        <div class="result-footer">
+                            Verification Date: ${formattedDate}
+                        </div>
+                        <div class="action-buttons">
+                            <button class="action-btn" onclick="window.print()"><i class="fa fa-print"></i> Print</button>
+                            <button class="action-btn" onclick="alert('Download functionality would connect to Australian Government systems')"><i class="fa fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                `;
+            } else {
+                document.getElementById('resultContainer').innerHTML = `
+                    <div class="result-card" style="border-left-color: #dc3545;">
+                        <div class="result-header">
+                            <h3 style="color: #dc3545;">No Visa Found</h3>
+                        </div>
+                        <p style="text-align: center; padding: 20px;">No matching visa details found. Please check your information.</p>
+                    </div>
+                `;
+            }
+        }, 3000);
+    }
+
+    console.log('%c🇦🇺 FLAG: VEVO{PERFECT_AUSTRALIAN_COPY_15_ENTRIES}', 'background: #132e48; color: white; font-size: 16px; padding: 8px; border-radius: 4px; font-weight: bold;');
+</script>
+
+</body>
+</html>
